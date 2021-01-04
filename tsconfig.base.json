@@ -14,7 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular/*": ["./node_modules/@angular/*"],
+      "@stores/header": ["./libs/header/src/index.ts"],
+      "@stores/data": ["./libs/data/src/index.ts"],
+      "@stores/ui": ["./libs/ui/src/index.ts"],
+      "@stores/ui-header": ["libs/ui-header/src/index.ts"],
+      "@stores/my-site-api-interface": [
+        "libs/my-site-api-interface/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

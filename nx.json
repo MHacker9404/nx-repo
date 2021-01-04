@@ -18,7 +18,13 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
       }
     }
   },
@@ -29,6 +35,55 @@
     "bike-store-e2e": {
       "tags": [],
       "implicitDependencies": ["bike-store"]
+    },
+    "header": {
+      "tags": []
+    },
+    "header-e2e": {
+      "tags": [],
+      "implicitDependencies": ["header"]
+    },
+    "todos": {
+      "tags": []
+    },
+    "todos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["todos"]
+    },
+    "todos-api": {
+      "tags": []
+    },
+    "data": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "my-site": {
+      "tags": []
+    },
+    "my-site-e2e": {
+      "tags": [],
+      "implicitDependencies": ["my-site"]
+    },
+    "ui-header": {
+      "tags": []
+    },
+    "my-site-api": {
+      "tags": []
+    },
+    "my-site-api-interface": {
+      "tags": []
+    },
+    "board-game": {
+      "tags": []
+    },
+    "board-game-e2e": {
+      "tags": [],
+      "implicitDependencies": ["board-game"]
+    },
+    "board-game-api": {
+      "tags": []
     }
   }
 }
