@@ -100,6 +100,13 @@
     },
     "board-game-review-data-access-games": {
       "tags": []
+    },
+    "board-game-store": {
+      "tags": []
+    },
+    "board-game-store-e2e": {
+      "tags": [],
+      "implicitDependencies": ["board-game-store"]
     }
   }
 }

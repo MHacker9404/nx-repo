@@ -864,6 +864,120 @@
           }
         }
       }
+    },
+    "board-game-store": {
+      "projectType": "application",
+      "root": "apps/board-game-store",
+      "sourceRoot": "apps/board-game-store/src",
+      "prefix": "stores",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/board-game-store",
+            "index": "apps/board-game-store/src/index.html",
+            "main": "apps/board-game-store/src/main.ts",
+            "polyfills": "apps/board-game-store/src/polyfills.ts",
+            "tsConfig": "apps/board-game-store/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/board-game-store/src/favicon.ico",
+              "apps/board-game-store/src/assets"
+            ],
+            "styles": ["apps/board-game-store/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/board-game-store/src/environments/environment.ts",
+                  "with": "apps/board-game-store/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "board-game-store:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "board-game-store:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "board-game-store:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/board-game-store/src/**/*.ts",
+              "apps/board-game-store/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/board-game-store"],
+          "options": {
+            "jestConfig": "apps/board-game-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "board-game-store-e2e": {
+      "root": "apps/board-game-store-e2e",
+      "sourceRoot": "apps/board-game-store-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/board-game-store-e2e/cypress.json",
+            "tsConfig": "apps/board-game-store-e2e/tsconfig.e2e.json",
+            "devServerTarget": "board-game-store:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "board-game-store:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/board-game-store-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
     }
   },
   "cli": {

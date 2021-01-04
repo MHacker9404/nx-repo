@@ -18,5 +18,6 @@ module.exports = {
     '<rootDir>/libs/board-game-review/ui-tile',
     '<rootDir>/libs/board-game-review/util-formatters',
     '<rootDir>/libs/board-game-review/data-access-games',
+    '<rootDir>/apps/board-game-store',
   ],
 };
