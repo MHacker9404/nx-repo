@@ -75,14 +75,30 @@
     "my-site-api-interface": {
       "tags": []
     },
-    "board-game": {
+    "board-game-review": {
       "tags": []
     },
-    "board-game-e2e": {
+    "board-game-review-e2e": {
       "tags": [],
-      "implicitDependencies": ["board-game"]
+      "implicitDependencies": ["board-game-review"]
     },
-    "board-game-api": {
+    "board-game-review-api": {
+      "tags": []
+    },
+    "board-game-review-api-e2e": {
+      "tags": [],
+      "implicitDependencies": ["board-game-review-api"]
+    },
+    "board-game-review-api-interface": {
+      "tags": []
+    },
+    "board-game-review-ui-tile": {
+      "tags": []
+    },
+    "board-game-review-util-formatters": {
+      "tags": []
+    },
+    "board-game-review-data-access-games": {
       "tags": []
     }
   }

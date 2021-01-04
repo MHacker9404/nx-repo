@@ -597,25 +597,25 @@
         }
       }
     },
-    "board-game": {
-      "root": "apps/board-game",
-      "sourceRoot": "apps/board-game/src",
+    "board-game-review": {
+      "root": "apps/board-game-review",
+      "sourceRoot": "apps/board-game-review/src",
       "projectType": "application",
       "architect": {
         "build": {
           "builder": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/board-game",
-            "index": "apps/board-game/src/index.html",
-            "main": "apps/board-game/src/main.tsx",
-            "polyfills": "apps/board-game/src/polyfills.ts",
-            "tsConfig": "apps/board-game/tsconfig.app.json",
+            "outputPath": "dist/apps/board-game-review",
+            "index": "apps/board-game-review/src/index.html",
+            "main": "apps/board-game-review/src/main.tsx",
+            "polyfills": "apps/board-game-review/src/polyfills.ts",
+            "tsConfig": "apps/board-game-review/tsconfig.app.json",
             "assets": [
-              "apps/board-game/src/favicon.ico",
-              "apps/board-game/src/assets"
+              "apps/board-game-review/src/favicon.ico",
+              "apps/board-game-review/src/assets"
             ],
-            "styles": ["apps/board-game/src/styles.scss"],
+            "styles": ["apps/board-game-review/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -623,8 +623,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/board-game/src/environments/environment.ts",
-                  "with": "apps/board-game/src/environments/environment.prod.ts"
+                  "replace": "apps/board-game-review/src/environments/environment.ts",
+                  "with": "apps/board-game-review/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -647,71 +647,71 @@
         "serve": {
           "builder": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "board-game:build",
-            "proxyConfig": "apps/board-game/proxy.conf.json"
+            "buildTarget": "board-game-review:build",
+            "proxyConfig": "apps/board-game-review/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "buildTarget": "board-game:build:production"
+              "buildTarget": "board-game-review:build:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/board-game/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": ["apps/board-game-review/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/board-game"],
+          "outputs": ["coverage/apps/board-game-review"],
           "options": {
-            "jestConfig": "apps/board-game/jest.config.js",
+            "jestConfig": "apps/board-game-review/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "board-game-e2e": {
-      "root": "apps/board-game-e2e",
-      "sourceRoot": "apps/board-game-e2e/src",
+    "board-game-review-e2e": {
+      "root": "apps/board-game-review-e2e",
+      "sourceRoot": "apps/board-game-review-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/board-game-e2e/cypress.json",
-            "tsConfig": "apps/board-game-e2e/tsconfig.e2e.json",
-            "devServerTarget": "board-game:serve"
+            "cypressConfig": "apps/board-game-review-e2e/cypress.json",
+            "tsConfig": "apps/board-game-review-e2e/tsconfig.e2e.json",
+            "devServerTarget": "board-game-review:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "board-game:serve:production"
+              "devServerTarget": "board-game-review:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/board-game-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/board-game-review-e2e/**/*.{js,ts}"]
           }
         }
       }
     },
-    "board-game-api": {
-      "root": "apps/board-game-api",
-      "sourceRoot": "apps/board-game-api/src",
+    "board-game-review-api": {
+      "root": "apps/board-game-review-api",
+      "sourceRoot": "apps/board-game-review-api/src",
       "projectType": "application",
-      "prefix": "board-game-api",
+      "prefix": "board-game-review-api",
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/board-game-api",
-            "main": "apps/board-game-api/src/main.ts",
-            "tsConfig": "apps/board-game-api/tsconfig.app.json",
-            "assets": ["apps/board-game-api/src/assets"]
+            "outputPath": "dist/apps/board-game-review-api",
+            "main": "apps/board-game-review-api/src/main.ts",
+            "tsConfig": "apps/board-game-review-api/tsconfig.app.json",
+            "assets": ["apps/board-game-review-api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -720,8 +720,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "apps/board-game-api/src/environments/environment.ts",
-                  "with": "apps/board-game-api/src/environments/environment.prod.ts"
+                  "replace": "apps/board-game-review-api/src/environments/environment.ts",
+                  "with": "apps/board-game-review-api/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -730,20 +730,136 @@
         "serve": {
           "builder": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "board-game-api:build"
+            "buildTarget": "board-game-review-api:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/board-game-api/**/*.ts"]
+            "lintFilePatterns": ["apps/board-game-review-api/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/board-game-api"],
+          "outputs": ["coverage/apps/board-game-review-api"],
           "options": {
-            "jestConfig": "apps/board-game-api/jest.config.js",
+            "jestConfig": "apps/board-game-review-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "board-game-review-api-e2e": {
+      "root": "apps/board-game-review-api-e2e",
+      "sourceRoot": "apps/board-game-review-api-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/board-game-review-api-e2e/cypress.json",
+            "tsConfig": "apps/board-game-review-api-e2e/tsconfig.e2e.json",
+            "devServerTarget": "board-game-review-api:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "board-game-review-api:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/board-game-review-api-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "board-game-review-api-interface": {
+      "root": "libs/board-game-review-api-interface",
+      "sourceRoot": "libs/board-game-review-api-interface/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/board-game-review-api-interface/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board-game-review-api-interface"],
+          "options": {
+            "jestConfig": "libs/board-game-review-api-interface/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "board-game-review-ui-tile": {
+      "root": "libs/board-game-review/ui-tile",
+      "sourceRoot": "libs/board-game-review/ui-tile/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board-game-review/ui-tile/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board-game-review/ui-tile"],
+          "options": {
+            "jestConfig": "libs/board-game-review/ui-tile/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "board-game-review-util-formatters": {
+      "root": "libs/board-game-review/util-formatters",
+      "sourceRoot": "libs/board-game-review/util-formatters/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board-game-review/util-formatters/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board-game-review/util-formatters"],
+          "options": {
+            "jestConfig": "libs/board-game-review/util-formatters/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "board-game-review-data-access-games": {
+      "root": "libs/board-game-review/data-access-games",
+      "sourceRoot": "libs/board-game-review/data-access-games/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board-game-review/data-access-games/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board-game-review/data-access-games"],
+          "options": {
+            "jestConfig": "libs/board-game-review/data-access-games/jest.config.js",
             "passWithNoTests": true
           }
         }

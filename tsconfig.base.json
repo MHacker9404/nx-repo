@@ -22,6 +22,18 @@
       "@stores/ui-header": ["libs/ui-header/src/index.ts"],
       "@stores/my-site-api-interface": [
         "libs/my-site-api-interface/src/index.ts"
+      ],
+      "@stores/board-game-review-api-interface": [
+        "libs/board-game-review-api-interface/src/index.ts"
+      ],
+      "@stores/board-game-review/ui-tile": [
+        "libs/board-game-review/ui-tile/src/index.ts"
+      ],
+      "@stores/board-game-review/util-formatters": [
+        "libs/board-game-review/util-formatters/src/index.ts"
+      ],
+      "@stores/board-game-review/data-access-games": [
+        "libs/board-game-review/data-access-games/src/index.ts"
       ]
     }
   },
