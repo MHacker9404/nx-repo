@@ -34,6 +34,24 @@
       ],
       "@stores/board-game-review/data-access-games": [
         "libs/board-game-review/data-access-games/src/index.ts"
+      ],
+      "@stores/board-game-store/feature-list": [
+        "libs/board-game-store/feature-list/src/index.ts"
+      ],
+      "@stores/board-game-store/feature-details": [
+        "libs/board-game-store/feature-details/src/index.ts"
+      ],
+      "@stores/board-game-store/feature-cart": [
+        "libs/board-game-store/feature-cart/src/index.ts"
+      ],
+      "@stores/board-game-store/ui-formatters": [
+        "libs/board-game-store/ui-formatters/src/index.ts"
+      ],
+      "@stores/board-game-store/data-access-games": [
+        "libs/board-game-store/data-access-games/src/index.ts"
+      ],
+      "@stores/store/data-access-cart": [
+        "libs/store/data-access-cart/src/index.ts"
       ]
     }
   },

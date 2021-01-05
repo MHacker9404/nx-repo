@@ -19,5 +19,11 @@ module.exports = {
     '<rootDir>/libs/board-game-review/util-formatters',
     '<rootDir>/libs/board-game-review/data-access-games',
     '<rootDir>/apps/board-game-store',
+    '<rootDir>/libs/board-game-store/feature-list',
+    '<rootDir>/libs/board-game-store/feature-details',
+    '<rootDir>/libs/board-game-store/feature-cart',
+    '<rootDir>/libs/board-game-store/ui-formatters',
+    '<rootDir>/libs/board-game-store/data-access-games',
+    '<rootDir>/libs/store/data-access-cart',
   ],
 };

@@ -107,6 +107,24 @@
     "board-game-store-e2e": {
       "tags": [],
       "implicitDependencies": ["board-game-store"]
+    },
+    "board-game-store-feature-list": {
+      "tags": []
+    },
+    "board-game-store-feature-details": {
+      "tags": []
+    },
+    "board-game-store-feature-cart": {
+      "tags": []
+    },
+    "board-game-store-ui-formatters": {
+      "tags": []
+    },
+    "board-game-store-data-access-games": {
+      "tags": []
+    },
+    "store-data-access-cart": {
+      "tags": []
     }
   }
 }
