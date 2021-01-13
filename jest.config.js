@@ -25,5 +25,12 @@ module.exports = {
     '<rootDir>/libs/board-game-store/ui-formatters',
     '<rootDir>/libs/board-game-store/data-access-games',
     '<rootDir>/libs/store/data-access-cart',
+    '<rootDir>/apps/sub-forms',
+    '<rootDir>/libs/plugins/my-plugin',
+    '<rootDir>/apps\\plugins\\my-plugin-e2e',
+    '<rootDir>/libs/my-plugin-next',
+    '<rootDir>/apps\\my-plugin-next-e2e',
+    '<rootDir>/libs/aws-cdk',
+    '<rootDir>/apps\\aws-cdk-e2e',
   ],
 };

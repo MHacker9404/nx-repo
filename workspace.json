@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "projects": {
     "bike-store": {
       "projectType": "application",
       "root": "apps/bike-store",
       "sourceRoot": "apps/bike-store/src",
       "prefix": "prb",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/bike-store",
             "index": "apps/bike-store/src/index.html",
@@ -54,7 +54,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "bike-store:build"
           },
@@ -65,13 +65,13 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "bike-store:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/bike-store/src/**/*.ts",
@@ -80,7 +80,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/bike-store"],
           "options": {
             "jestConfig": "apps/bike-store/jest.config.js",
@@ -93,9 +93,9 @@
       "root": "apps/bike-store-e2e",
       "sourceRoot": "apps/bike-store-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/bike-store-e2e/cypress.json",
             "tsConfig": "apps/bike-store-e2e/tsconfig.e2e.json",
@@ -108,7 +108,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/bike-store-e2e/**/*.{js,ts}"]
           }
@@ -120,9 +120,9 @@
       "root": "libs/header",
       "sourceRoot": "libs/header/src",
       "prefix": "prb",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/header/src/**/*.ts",
@@ -131,7 +131,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/header"],
           "options": {
             "jestConfig": "libs/header/jest.config.js",
@@ -139,7 +139,7 @@
           }
         },
         "storybook": {
-          "builder": "@nrwl/storybook:storybook",
+          "executor": "@nrwl/storybook:storybook",
           "options": {
             "uiFramework": "@storybook/angular",
             "port": 4400,
@@ -154,7 +154,7 @@
           }
         },
         "build-storybook": {
-          "builder": "@nrwl/storybook:build",
+          "executor": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/angular",
             "outputPath": "dist/storybook/header",
@@ -174,9 +174,9 @@
       "root": "apps/header-e2e",
       "sourceRoot": "apps/header-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/header-e2e/cypress.json",
             "tsConfig": "apps/header-e2e/tsconfig.e2e.json",
@@ -189,7 +189,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/header-e2e/**/*.{js,ts}"]
           }
@@ -201,9 +201,9 @@
       "root": "apps/todos",
       "sourceRoot": "apps/todos/src",
       "prefix": "prb",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/todos",
             "index": "apps/todos/src/index.html",
@@ -246,7 +246,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "todos:build",
             "proxyConfig": "apps/todos/proxy.conf.json"
@@ -258,13 +258,13 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "todos:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/todos/src/**/*.ts",
@@ -273,7 +273,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/todos"],
           "options": {
             "jestConfig": "apps/todos/jest.config.js",
@@ -286,9 +286,9 @@
       "root": "apps/todos-e2e",
       "sourceRoot": "apps/todos-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/todos-e2e/cypress.json",
             "tsConfig": "apps/todos-e2e/tsconfig.e2e.json",
@@ -301,7 +301,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/todos-e2e/**/*.{js,ts}"]
           }
@@ -312,10 +312,10 @@
       "root": "apps/todos-api",
       "sourceRoot": "apps/todos-api/src",
       "projectType": "application",
-      "prefix": "todos-api",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/todos-api",
@@ -338,19 +338,19 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "executor": "@nrwl/node:execute",
           "options": {
             "buildTarget": "todos-api:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/todos-api/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/todos-api"],
           "options": {
             "jestConfig": "apps/todos-api/jest.config.js",
@@ -364,15 +364,15 @@
       "sourceRoot": "libs/data/src",
       "projectType": "library",
       "prefix": "prb",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/data/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/data"],
           "options": {
             "jestConfig": "libs/data/jest.config.js",
@@ -386,15 +386,15 @@
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",
       "prefix": "prb",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/ui"],
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
@@ -407,9 +407,9 @@
       "root": "apps/my-site",
       "sourceRoot": "apps/my-site/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@nrwl/web:build",
+          "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/my-site",
@@ -451,7 +451,7 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/web:dev-server",
+          "executor": "@nrwl/web:dev-server",
           "options": {
             "buildTarget": "my-site:build",
             "proxyConfig": "apps/my-site/proxy.conf.json"
@@ -463,13 +463,13 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/my-site/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/my-site"],
           "options": {
             "jestConfig": "apps/my-site/jest.config.js",
@@ -482,9 +482,9 @@
       "root": "apps/my-site-e2e",
       "sourceRoot": "apps/my-site-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/my-site-e2e/cypress.json",
             "tsConfig": "apps/my-site-e2e/tsconfig.e2e.json",
@@ -497,7 +497,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/my-site-e2e/**/*.{js,ts}"]
           }
@@ -508,15 +508,15 @@
       "root": "libs/ui-header",
       "sourceRoot": "libs/ui-header/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/ui-header/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/ui-header"],
           "options": {
             "jestConfig": "libs/ui-header/jest.config.js",
@@ -529,10 +529,10 @@
       "root": "apps/my-site-api",
       "sourceRoot": "apps/my-site-api/src",
       "projectType": "application",
-      "prefix": "my-site-api",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/my-site-api",
@@ -555,19 +555,19 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "executor": "@nrwl/node:execute",
           "options": {
             "buildTarget": "my-site-api:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/my-site-api/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/my-site-api"],
           "options": {
             "jestConfig": "apps/my-site-api/jest.config.js",
@@ -580,15 +580,15 @@
       "root": "libs/my-site-api-interface",
       "sourceRoot": "libs/my-site-api-interface/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/my-site-api-interface/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/my-site-api-interface"],
           "options": {
             "jestConfig": "libs/my-site-api-interface/jest.config.js",
@@ -601,9 +601,9 @@
       "root": "apps/board-game-review",
       "sourceRoot": "apps/board-game-review/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@nrwl/web:build",
+          "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/board-game-review",
@@ -645,7 +645,7 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/web:dev-server",
+          "executor": "@nrwl/web:dev-server",
           "options": {
             "buildTarget": "board-game-review:build",
             "proxyConfig": "apps/board-game-review/proxy.conf.json"
@@ -657,13 +657,13 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/board-game-review/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/board-game-review"],
           "options": {
             "jestConfig": "apps/board-game-review/jest.config.js",
@@ -676,9 +676,9 @@
       "root": "apps/board-game-review-e2e",
       "sourceRoot": "apps/board-game-review-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/board-game-review-e2e/cypress.json",
             "tsConfig": "apps/board-game-review-e2e/tsconfig.e2e.json",
@@ -691,7 +691,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/board-game-review-e2e/**/*.{js,ts}"]
           }
@@ -702,10 +702,10 @@
       "root": "apps/board-game-review-api",
       "sourceRoot": "apps/board-game-review-api/src",
       "projectType": "application",
-      "prefix": "board-game-review-api",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/board-game-review-api",
@@ -728,19 +728,19 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "executor": "@nrwl/node:execute",
           "options": {
             "buildTarget": "board-game-review-api:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/board-game-review-api/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/board-game-review-api"],
           "options": {
             "jestConfig": "apps/board-game-review-api/jest.config.js",
@@ -753,9 +753,9 @@
       "root": "apps/board-game-review-api-e2e",
       "sourceRoot": "apps/board-game-review-api-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/board-game-review-api-e2e/cypress.json",
             "tsConfig": "apps/board-game-review-api-e2e/tsconfig.e2e.json",
@@ -768,7 +768,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/board-game-review-api-e2e/**/*.{js,ts}"]
           }
@@ -779,15 +779,15 @@
       "root": "libs/board-game-review-api-interface",
       "sourceRoot": "libs/board-game-review-api-interface/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/board-game-review-api-interface/**/*.ts"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-review-api-interface"],
           "options": {
             "jestConfig": "libs/board-game-review-api-interface/jest.config.js",
@@ -800,9 +800,9 @@
       "root": "libs/board-game-review/ui-tile",
       "sourceRoot": "libs/board-game-review/ui-tile/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-review/ui-tile/**/*.{ts,tsx,js,jsx}"
@@ -810,7 +810,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-review/ui-tile"],
           "options": {
             "jestConfig": "libs/board-game-review/ui-tile/jest.config.js",
@@ -823,9 +823,9 @@
       "root": "libs/board-game-review/util-formatters",
       "sourceRoot": "libs/board-game-review/util-formatters/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-review/util-formatters/**/*.{ts,tsx,js,jsx}"
@@ -833,7 +833,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-review/util-formatters"],
           "options": {
             "jestConfig": "libs/board-game-review/util-formatters/jest.config.js",
@@ -846,9 +846,9 @@
       "root": "libs/board-game-review/data-access-games",
       "sourceRoot": "libs/board-game-review/data-access-games/src",
       "projectType": "library",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-review/data-access-games/**/*.{ts,tsx,js,jsx}"
@@ -856,7 +856,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-review/data-access-games"],
           "options": {
             "jestConfig": "libs/board-game-review/data-access-games/jest.config.js",
@@ -869,10 +869,10 @@
       "projectType": "application",
       "root": "apps/board-game-store",
       "sourceRoot": "apps/board-game-store/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/board-game-store",
             "index": "apps/board-game-store/src/index.html",
@@ -918,7 +918,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "board-game-store:build"
           },
@@ -929,13 +929,13 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "board-game-store:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/board-game-store/src/**/*.ts",
@@ -944,7 +944,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/board-game-store"],
           "options": {
             "jestConfig": "apps/board-game-store/jest.config.js",
@@ -957,9 +957,9 @@
       "root": "apps/board-game-store-e2e",
       "sourceRoot": "apps/board-game-store-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/board-game-store-e2e/cypress.json",
             "tsConfig": "apps/board-game-store-e2e/tsconfig.e2e.json",
@@ -972,7 +972,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/board-game-store-e2e/**/*.{js,ts}"]
           }
@@ -983,10 +983,10 @@
       "projectType": "library",
       "root": "libs/board-game-store/feature-list",
       "sourceRoot": "libs/board-game-store/feature-list/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-store/feature-list/src/**/*.ts",
@@ -995,7 +995,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-store/feature-list"],
           "options": {
             "jestConfig": "libs/board-game-store/feature-list/jest.config.js",
@@ -1008,10 +1008,10 @@
       "projectType": "library",
       "root": "libs/board-game-store/feature-details",
       "sourceRoot": "libs/board-game-store/feature-details/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-store/feature-details/src/**/*.ts",
@@ -1020,7 +1020,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-store/feature-details"],
           "options": {
             "jestConfig": "libs/board-game-store/feature-details/jest.config.js",
@@ -1033,10 +1033,10 @@
       "projectType": "library",
       "root": "libs/board-game-store/feature-cart",
       "sourceRoot": "libs/board-game-store/feature-cart/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-store/feature-cart/src/**/*.ts",
@@ -1045,7 +1045,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-store/feature-cart"],
           "options": {
             "jestConfig": "libs/board-game-store/feature-cart/jest.config.js",
@@ -1058,10 +1058,10 @@
       "projectType": "library",
       "root": "libs/board-game-store/ui-formatters",
       "sourceRoot": "libs/board-game-store/ui-formatters/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-store/ui-formatters/src/**/*.ts",
@@ -1070,7 +1070,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-store/ui-formatters"],
           "options": {
             "jestConfig": "libs/board-game-store/ui-formatters/jest.config.js",
@@ -1083,10 +1083,10 @@
       "projectType": "library",
       "root": "libs/board-game-store/data-access-games",
       "sourceRoot": "libs/board-game-store/data-access-games/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/board-game-store/data-access-games/src/**/*.ts",
@@ -1095,7 +1095,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/board-game-store/data-access-games"],
           "options": {
             "jestConfig": "libs/board-game-store/data-access-games/jest.config.js",
@@ -1108,10 +1108,10 @@
       "projectType": "library",
       "root": "libs/store/data-access-cart",
       "sourceRoot": "libs/store/data-access-cart/src",
-      "prefix": "stores",
-      "architect": {
+      "prefix": "prb",
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/store/data-access-cart/src/**/*.ts",
@@ -1120,7 +1120,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/store/data-access-cart"],
           "options": {
             "jestConfig": "libs/store/data-access-cart/jest.config.js",
@@ -1128,13 +1128,202 @@
           }
         }
       }
+    },
+    "sub-forms": {
+      "projectType": "application",
+      "root": "apps/sub-forms",
+      "sourceRoot": "apps/sub-forms/src",
+      "prefix": "prb",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/sub-forms",
+            "index": "apps/sub-forms/src/index.html",
+            "main": "apps/sub-forms/src/main.ts",
+            "polyfills": "apps/sub-forms/src/polyfills.ts",
+            "tsConfig": "apps/sub-forms/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/sub-forms/src/favicon.ico",
+              "apps/sub-forms/src/assets"
+            ],
+            "styles": ["apps/sub-forms/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/sub-forms/src/environments/environment.ts",
+                  "with": "apps/sub-forms/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sub-forms:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sub-forms:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sub-forms:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/sub-forms/src/**/*.ts",
+              "apps/sub-forms/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/sub-forms"],
+          "options": {
+            "jestConfig": "apps/sub-forms/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "sub-forms-e2e": {
+      "root": "apps/sub-forms-e2e",
+      "sourceRoot": "apps/sub-forms-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/sub-forms-e2e/cypress.json",
+            "tsConfig": "apps/sub-forms-e2e/tsconfig.e2e.json",
+            "devServerTarget": "sub-forms:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sub-forms:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/sub-forms-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "aws-cdk": {
+      "root": "libs/aws-cdk",
+      "sourceRoot": "libs/aws-cdk/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/aws-cdk/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/aws-cdk"],
+          "options": {
+            "jestConfig": "libs/aws-cdk/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/aws-cdk",
+            "tsConfig": "libs/aws-cdk/tsconfig.lib.json",
+            "packageJson": "libs/aws-cdk/package.json",
+            "main": "libs/aws-cdk/src/index.ts",
+            "assets": [
+              "libs/aws-cdk/*.md",
+              {
+                "input": "./libs/aws-cdk/src",
+                "glob": "**/*.!(ts)",
+                "output": "./src"
+              },
+              {
+                "input": "./libs/aws-cdk",
+                "glob": "generators.json",
+                "output": "."
+              },
+              {
+                "input": "./libs/aws-cdk",
+                "glob": "executors.json",
+                "output": "."
+              }
+            ]
+          }
+        }
+      }
+    },
+    "aws-cdk-e2e": {
+      "projectType": "application",
+      "root": "apps\\aws-cdk-e2e",
+      "sourceRoot": "apps\\aws-cdk-e2e/src",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/nx-plugin:e2e",
+          "options": {
+            "target": "aws-cdk:build",
+            "npmPackageName": "@prb/aws-cdk",
+            "pluginOutputPath": "dist/libs/aws-cdk",
+            "jestConfig": "apps/aws-cdk-e2e/jest.config.js"
+          }
+        }
+      }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/workspace"
   },
-  "schematics": {
-    "@nrwl/angular": {
+  "generators": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/react": {
       "application": {
         "linter": "eslint"
       },
@@ -1145,27 +1334,39 @@
         "linter": "eslint"
       }
     },
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    },
-    "@nrwl/react": {
+    "@nrwl/next": {
       "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/web": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "eslint"
       },
       "library": {
-        "style": "scss",
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/nx-plugin": {
+      "plugin": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
         "linter": "eslint"
       }
     }

@@ -1,5 +1,4 @@
 import { Body, Controller, Get, Post, Put } from '@nestjs/common';
-import { Cart } from '@stores/board-game-review-api-interface';
 
 @Controller('cart')
 export class CartController {

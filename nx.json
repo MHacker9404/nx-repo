@@ -1,14 +1,9 @@
 {
-  "npmScope": "stores",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "npmScope": "prb",
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -29,102 +24,48 @@
     }
   },
   "projects": {
-    "bike-store": {
-      "tags": []
-    },
-    "bike-store-e2e": {
-      "tags": [],
-      "implicitDependencies": ["bike-store"]
-    },
-    "header": {
-      "tags": []
-    },
-    "header-e2e": {
-      "tags": [],
-      "implicitDependencies": ["header"]
-    },
-    "todos": {
-      "tags": []
-    },
-    "todos-e2e": {
-      "tags": [],
-      "implicitDependencies": ["todos"]
-    },
-    "todos-api": {
-      "tags": []
-    },
-    "data": {
-      "tags": []
-    },
-    "ui": {
-      "tags": []
-    },
-    "my-site": {
-      "tags": []
-    },
-    "my-site-e2e": {
-      "tags": [],
-      "implicitDependencies": ["my-site"]
-    },
-    "ui-header": {
-      "tags": []
-    },
-    "my-site-api": {
-      "tags": []
-    },
-    "my-site-api-interface": {
-      "tags": []
-    },
-    "board-game-review": {
-      "tags": []
-    },
+    "bike-store": { "tags": [] },
+    "bike-store-e2e": { "tags": [], "implicitDependencies": ["bike-store"] },
+    "header": { "tags": [] },
+    "header-e2e": { "tags": [], "implicitDependencies": ["header"] },
+    "todos": { "tags": [] },
+    "todos-e2e": { "tags": [], "implicitDependencies": ["todos"] },
+    "todos-api": { "tags": [] },
+    "data": { "tags": [] },
+    "ui": { "tags": [] },
+    "my-site": { "tags": [] },
+    "my-site-e2e": { "tags": [], "implicitDependencies": ["my-site"] },
+    "ui-header": { "tags": [] },
+    "my-site-api": { "tags": [] },
+    "my-site-api-interface": { "tags": [] },
+    "board-game-review": { "tags": [] },
     "board-game-review-e2e": {
       "tags": [],
       "implicitDependencies": ["board-game-review"]
     },
-    "board-game-review-api": {
-      "tags": []
-    },
+    "board-game-review-api": { "tags": [] },
     "board-game-review-api-e2e": {
       "tags": [],
       "implicitDependencies": ["board-game-review-api"]
     },
-    "board-game-review-api-interface": {
-      "tags": []
-    },
-    "board-game-review-ui-tile": {
-      "tags": []
-    },
-    "board-game-review-util-formatters": {
-      "tags": []
-    },
-    "board-game-review-data-access-games": {
-      "tags": []
-    },
-    "board-game-store": {
-      "tags": []
-    },
+    "board-game-review-api-interface": { "tags": [] },
+    "board-game-review-ui-tile": { "tags": [] },
+    "board-game-review-util-formatters": { "tags": [] },
+    "board-game-review-data-access-games": { "tags": [] },
+    "board-game-store": { "tags": [] },
     "board-game-store-e2e": {
       "tags": [],
       "implicitDependencies": ["board-game-store"]
     },
-    "board-game-store-feature-list": {
-      "tags": []
-    },
-    "board-game-store-feature-details": {
-      "tags": []
-    },
-    "board-game-store-feature-cart": {
-      "tags": []
-    },
-    "board-game-store-ui-formatters": {
-      "tags": []
-    },
-    "board-game-store-data-access-games": {
-      "tags": []
-    },
-    "store-data-access-cart": {
-      "tags": []
-    }
+    "board-game-store-feature-list": { "tags": [] },
+    "board-game-store-feature-details": { "tags": [] },
+    "board-game-store-feature-cart": { "tags": [] },
+    "board-game-store-ui-formatters": { "tags": [] },
+    "board-game-store-data-access-games": { "tags": [] },
+    "store-data-access-cart": { "tags": [] },
+    "sub-forms": { "tags": [] },
+    "sub-forms-e2e": { "tags": [], "implicitDependencies": ["sub-forms"] },
+    "aws-cdk": { "tags": [] },
+    "aws-cdk-e2e": { "tags": [], "implicitDependencies": ["aws-cdk"] }
   }
 }

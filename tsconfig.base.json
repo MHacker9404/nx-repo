@@ -52,7 +52,10 @@
       ],
       "@stores/store/data-access-cart": [
         "libs/store/data-access-cart/src/index.ts"
-      ]
+      ],
+      "@prb/my-plugin": ["libs/plugins/my-plugin/src/index.ts"],
+      "@prb/my-plugin-next": ["libs/my-plugin-next/src/index.ts"],
+      "@prb/aws-cdk": ["libs/aws-cdk/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
