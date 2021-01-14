@@ -1,6 +1,6 @@
 {
-  "npmScope": "prb",
-  "affected": { "defaultBase": "master" },
+  "npmScope": "prb-ts",
+  "affected": { "defaultBase": "trunk" },
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": { "dependencies": "*", "devDependencies": "*" },

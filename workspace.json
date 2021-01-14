@@ -50,6 +50,23 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "dev": {
+              "watch": true,
+              "verbose": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/bike-store/src/environments/environment.ts",
+                  "with": "apps/bike-store/src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": false,
+              "extractLicenses": false,
+              "vendorChunk": false,
+              "buildOptimizer": false
             }
           }
         },
