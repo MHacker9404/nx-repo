@@ -4,7 +4,7 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -55,7 +55,10 @@
       ],
       "@prb/my-plugin": ["libs/plugins/my-plugin/src/index.ts"],
       "@prb/my-plugin-next": ["libs/my-plugin-next/src/index.ts"],
-      "@prb/aws-cdk": ["libs/aws-cdk/src/index.ts"]
+      "@prb/aws-cdk": ["libs/aws-cdk/src/index.ts"],
+      "@prb-ts/udemy-typescript-tcdg": [
+        "libs/udemy-typescript-tcdg/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

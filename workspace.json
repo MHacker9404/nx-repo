@@ -1324,6 +1324,36 @@
           }
         }
       }
+    },
+    "udemy-typescript-tcdg": {
+      "root": "libs/udemy-typescript-tcdg",
+      "sourceRoot": "libs/udemy-typescript-tcdg/src/lib",
+      "projectType": "library",
+      "targets": {
+        "serve": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "cwd": "libs/udemy-typescript-tcdg/src/lib",
+            "commands": [
+              "node --loader ts-node/esm.mjs --experimental-top-level-await lesson-05.ts"
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/udemy-typescript-tcdg/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/udemy-typescript-tcdg"],
+          "options": {
+            "jestConfig": "libs/udemy-typescript-tcdg/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

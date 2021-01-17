@@ -32,5 +32,6 @@ module.exports = {
     '<rootDir>/apps\\my-plugin-next-e2e',
     '<rootDir>/libs/aws-cdk',
     '<rootDir>/apps\\aws-cdk-e2e',
+    '<rootDir>/libs/udemy-typescript-tcdg',
   ],
 };
