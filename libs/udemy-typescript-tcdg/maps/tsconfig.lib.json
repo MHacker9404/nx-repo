@@ -1,11 +1,11 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
-        "outDir": "dist/",
+        "outDir": "../dist",
         "rootDir": "",
         "types": [],
         "module": "ESNext"
     },
     "exclude": ["**/*.spec.ts"],
-    "include": ["**/*.ts"]
+    "include": ["*.ts", "**/*.ts"]
 }
