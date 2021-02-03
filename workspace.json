@@ -1372,14 +1372,14 @@
         },
         "udemy-typescript-tcdg": {
             "projectType": "library",
-            "root": "libs/udemy-typescript-tcdg",
-            "sourceRoot": "libs/udemy-typescript-tcdg/",
+            "root": "libs/udemy-typescript-tcdg/",
+            "sourceRoot": "libs/udemy-typescript-tcdg",
             "targets": {
                 "build": {
                     "executor": "@nrwl/workspace:run-commands",
                     "options": {
-                        "commands": ["rimraf ../dist", "parcel index.html -d ../dist"],
-                        "cwd": "libs/udemy-typescript-tcdg/section-10",
+                        "commands": ["rimraf dist", "tsc --project tsconfig.lib.json"],
+                        "cwd": "libs/udemy-typescript-tcdg/section-10/",
                         "parallel": false
                     }
                 },
@@ -1392,7 +1392,7 @@
                 "serve": {
                     "executor": "@nrwl/workspace:run-commands",
                     "options": {
-                        "commands": ["node --loader ts-node/esm.mjs --experimental-top-level-await index.ts"],
+                        "commands": ["rimraf dist", "node --loader ts-node/esm.mjs --experimental-top-level-await index.ts"],
                         "cwd": "libs/udemy-typescript-tcdg/section-10"
                     }
                 },

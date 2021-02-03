@@ -8,6 +8,14 @@ tmp/
 # dependencies
 node_modules/
 
+# yarn 2.0
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 # IDEs and editors
 
 # IDE - VSCode
