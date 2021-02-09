@@ -3,7 +3,7 @@
     "compilerOptions": {
         "outDir": "dist/",
         "rootDir": "",
-        "module": "ESNext"
+        "module": "commonjs"
     },
     "exclude": ["**/*.spec.ts"],
     "include": ["**/*.ts"]
