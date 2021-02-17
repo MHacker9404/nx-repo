@@ -30,11 +30,11 @@ module.exports = {
     plugins: [
         '@semantic-release/commit-analyzer',
         {
-            preset: 'angular',
+            // preset: 'angular',
             releaseRules: [
                 { type: 'feat', release: 'minor' },
                 //     { type: 'perf', release: 'minor' },
-                //     { type: 'build', release: 'patch' },
+                { type: 'build', release: 'patch' },
                 //     { type: 'ci', release: 'patch' },
                 //     { type: 'chore', release: 'patch' },
                 //     { type: 'refactor', release: 'patch' },
