@@ -29,7 +29,7 @@ module.exports = {
     plugins: [
         '@semantic-release/commit-analyzer',
         {
-            preset: 'angular',
+            // preset: 'angular',
             releaseRules: [
                 { type: 'feature', release: 'minor' },
                 { type: 'perf', release: 'minor' },
@@ -47,12 +47,6 @@ module.exports = {
         },
         '@semantic-release/release-notes-generator',
         '@semantic-release/changelog',
-        [
-            '@semantic-release/npm',
-            {
-                npmPublish: false,
-            },
-        ],
         '@semantic-release/github',
         '@semantic-release/git',
     ],
