@@ -11,7 +11,7 @@ module.exports = {
         },
         {
             name: 'feature/\\w*',
-            prerelease: "alpha-${envCi.branch.trimLeft('feature/')}",
+            prerelease: "alpha-${nextRelease.channel.trimLeft('feature/')}",
         },
         {
             name: 'fix/\\w*',
