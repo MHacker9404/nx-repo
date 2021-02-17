@@ -31,6 +31,8 @@ module.exports = {
         {
             preset: 'angular',
             releaseRules: [
+                { type: 'feature', release: 'minor' },
+                { type: 'perf', release: 'minor' },
                 { type: 'build', release: 'patch' },
                 { type: 'ci', release: 'patch' },
                 { type: 'chore', release: 'patch' },
@@ -38,8 +40,6 @@ module.exports = {
                 { type: 'style', release: 'patch' },
                 { type: 'refactor', release: 'patch' },
                 { type: 'fix', release: 'minor' },
-                { type: 'perf', release: 'minor' },
-                { type: 'feature', release: 'minor' },
             ],
             parserOpts: {
                 noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
