@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/MHacker9404/nx-repo/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-02-17)
+
+
+### Features
+
+* **repo:** update release.config.js ([d4ed28d](https://github.com/MHacker9404/nx-repo/commit/d4ed28df52048c1ecd3aac9693d5059161a9262e))
+
 # [1.0.0-alpha.2](https://github.com/MHacker9404/nx-repo/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-02-17)
 
 
