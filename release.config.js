@@ -32,15 +32,15 @@ module.exports = {
         {
             // preset: 'angular',
             releaseRules: [
-                { type: 'feat', release: 'minor' },
+                { type: 'feat', scope: '*', release: 'minor' },
                 //     { type: 'perf', release: 'minor' },
-                { type: 'build', release: 'patch' },
+                { type: 'build', scope: '*', release: 'patch' },
                 //     { type: 'ci', release: 'patch' },
                 //     { type: 'chore', release: 'patch' },
                 //     { type: 'refactor', release: 'patch' },
                 //     { type: 'style', release: 'patch' },
                 //     { type: 'refactor', release: 'patch' },
-                { type: 'WIP', release: 'patch' },
+                { type: 'WIP', scope: '*', release: 'patch' },
             ],
             parserOpts: {
                 noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
