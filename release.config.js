@@ -52,5 +52,11 @@ module.exports = {
         '@semantic-release/changelog',
         '@semantic-release/github',
         '@semantic-release/git',
+        [
+            '@semantic-release/exec',
+            {
+                publishCmd: './publish.sh ${nextRelease.version} ${options.branch} ${commits.length} ${Date.now()}',
+            },
+        ],
     ],
 };
