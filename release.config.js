@@ -32,7 +32,7 @@ module.exports = {
         {
             preset: 'angular',
             releaseRules: [
-                //     { type: 'feat', release: 'minor' },
+                { type: 'feat', release: 'minor' },
                 //     { type: 'perf', release: 'minor' },
                 //     { type: 'build', release: 'patch' },
                 //     { type: 'ci', release: 'patch' },
