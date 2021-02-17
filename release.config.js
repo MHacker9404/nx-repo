@@ -7,11 +7,11 @@ module.exports = {
         },
         {
             name: 'dev',
-            prerelease: 'dev',
+            prerelease: 'beta',
         },
         {
             name: 'feature/\\w*',
-            prerelease: 'alpha',
+            prerelease: "alpha-${envCi.branch.trimLeft('feature/')}",
         },
         {
             name: 'fix/\\w*',
