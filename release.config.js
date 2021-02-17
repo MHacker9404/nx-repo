@@ -28,24 +28,26 @@ module.exports = {
         },
     ],
     plugins: [
-        '@semantic-release/commit-analyzer',
-        {
-            // preset: 'angular',
-            releaseRules: [
-                { type: 'feat', scope: '*', release: 'minor' },
-                //     { type: 'perf', release: 'minor' },
-                { type: 'build', scope: '*', release: 'patch' },
-                //     { type: 'ci', release: 'patch' },
-                //     { type: 'chore', release: 'patch' },
-                //     { type: 'refactor', release: 'patch' },
-                //     { type: 'style', release: 'patch' },
-                //     { type: 'refactor', release: 'patch' },
-                { type: 'WIP', scope: '*', release: 'patch' },
-            ],
-            parserOpts: {
-                noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+        [
+            '@semantic-release/commit-analyzer',
+            {
+                preset: 'angular',
+                releaseRules: [
+                    { type: 'feat', scope: '*', release: 'minor' },
+                    //     { type: 'perf', release: 'minor' },
+                    { type: 'build', scope: '*', release: 'patch' },
+                    //     { type: 'ci', release: 'patch' },
+                    //     { type: 'chore', release: 'patch' },
+                    //     { type: 'refactor', release: 'patch' },
+                    //     { type: 'style', release: 'patch' },
+                    //     { type: 'refactor', release: 'patch' },
+                    { type: 'WIP', scope: '*', release: 'patch' },
+                ],
+                parserOpts: {
+                    noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+                },
             },
-        },
+        ],
         '@semantic-release/release-notes-generator',
         '@semantic-release/changelog',
         '@semantic-release/github',
