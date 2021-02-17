@@ -29,17 +29,17 @@ module.exports = {
     plugins: [
         '@semantic-release/commit-analyzer',
         {
-            // preset: 'angular',
+            preset: 'angular',
             releaseRules: [
-                { tag: 'build', release: 'patch' },
-                { tag: 'ci', release: 'patch' },
-                { tag: 'chore', release: 'patch' },
-                { tag: 'refactor', release: 'patch' },
-                { tag: 'style', release: 'patch' },
-                { tag: 'refactor', release: 'patch' },
-                { tag: 'fix', release: 'minor' },
-                { tag: 'perf', release: 'minor' },
-                { tag: 'feature', release: 'minor' },
+                { type: 'build', release: 'patch' },
+                { type: 'ci', release: 'patch' },
+                { type: 'chore', release: 'patch' },
+                { type: 'refactor', release: 'patch' },
+                { type: 'style', release: 'patch' },
+                { type: 'refactor', release: 'patch' },
+                { type: 'fix', release: 'minor' },
+                { type: 'perf', release: 'minor' },
+                { type: 'feature', release: 'minor' },
             ],
             parserOpts: {
                 noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
