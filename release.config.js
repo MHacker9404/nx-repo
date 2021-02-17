@@ -22,7 +22,8 @@ module.exports = {
         '@semantic-release/changelog',
         {
             path: '@semantic-release/git',
-            assets: ['package.json', 'yarn.lock', 'CHANGELOG.md'],
+            // assets: ['package.json', 'yarn.lock', 'CHANGELOG.md'],
+            assets: ['CHANGELOG.md'],
             message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
         },
     ],
@@ -30,17 +31,17 @@ module.exports = {
         '@semantic-release/commit-analyzer',
         {
             preset: 'angular',
-            releaseRules: [
-                { type: 'feat', release: 'minor' },
-                { type: 'perf', release: 'minor' },
-                { type: 'build', release: 'patch' },
-                { type: 'ci', release: 'patch' },
-                { type: 'chore', release: 'patch' },
-                { type: 'refactor', release: 'patch' },
-                { type: 'style', release: 'patch' },
-                { type: 'refactor', release: 'patch' },
-                { type: 'fix', release: 'minor' },
-            ],
+            // releaseRules: [
+            //     { type: 'feat', release: 'minor' },
+            //     { type: 'perf', release: 'minor' },
+            //     { type: 'build', release: 'patch' },
+            //     { type: 'ci', release: 'patch' },
+            //     { type: 'chore', release: 'patch' },
+            //     { type: 'refactor', release: 'patch' },
+            //     { type: 'style', release: 'patch' },
+            //     { type: 'refactor', release: 'patch' },
+            //     { type: 'fix', release: 'minor' },
+            // ],
             parserOpts: {
                 noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
             },
