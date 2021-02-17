@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/MHacker9404/nx-repo/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-02-17)
+
+
+### Bug Fixes
+
+* add cz config ([71f04c5](https://github.com/MHacker9404/nx-repo/commit/71f04c5a409d715a1331a9c25bfa31404a9c195e))
+
 # [1.0.0-alpha.3](https://github.com/MHacker9404/nx-repo/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-02-17)
 
 
