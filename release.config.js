@@ -11,7 +11,7 @@ module.exports = {
         },
         {
             name: 'feature/\\w*',
-            prerelease: "alpha-${nextRelease.channel.trimLeft('feature/')}",
+            prerelease: 'alpha',
         },
         {
             name: 'fix/\\w*',
