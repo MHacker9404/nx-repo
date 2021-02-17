@@ -55,7 +55,7 @@ module.exports = {
         [
             '@semantic-release/exec',
             {
-                publishCmd: './publish.sh ${nextRelease.version} ${JSON.stringify(options)} ${commits.length} ${Date.now()}',
+                publishCmd: './publish.sh ${nextRelease.version} ${JSON.stringify(context)} ${commits.length} ${Date.now()}',
             },
         ],
     ],
