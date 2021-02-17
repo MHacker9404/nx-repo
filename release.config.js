@@ -3,6 +3,10 @@ module.exports = {
     branches: [
         'trunk',
         {
+            name: 'release/[0-9]*',
+            prerelease: 'test',
+        },
+        {
             name: 'dev',
             prerelease: 'dev',
         },
@@ -11,7 +15,7 @@ module.exports = {
             prerelease: 'alpha',
         },
         {
-            name: 'hotfix/\\w*',
+            name: 'fix/\\w*',
             prerelease: 'alpha',
         },
     ],
@@ -20,6 +24,7 @@ module.exports = {
         '@semantic-release/commit-analyzer',
         '@semantic-release/release-notes-generator',
         '@semantic-release/changelog',
+        '@semantic-release/github',
         '@semantic-release/git',
     ],
 };
