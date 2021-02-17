@@ -1,3 +1,12 @@
+# 1.0.0-beta.1 (2021-02-17)
+
+
+### Features
+
+* **section-10:** init section-10 ([b089867](https://github.com/MHacker9404/nx-repo/commit/b089867306cb01617bf9f37d681500aae4652938))
+* **udemy-typescript-tcdg:** section-09 complete ([fd87b1c](https://github.com/MHacker9404/nx-repo/commit/fd87b1c1d72aa2e7bd3caadef40a1db5e80cbd94))
+* **udemy-typescript-tcdg:** WIP ([c635418](https://github.com/MHacker9404/nx-repo/commit/c635418f49127045db11dd7ce93de74b75d5176b))
+
 # [1.0.0-alpha.13](https://github.com/MHacker9404/nx-repo/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2021-02-17)
 
 # [1.0.0-alpha.12](https://github.com/MHacker9404/nx-repo/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2021-02-17)
