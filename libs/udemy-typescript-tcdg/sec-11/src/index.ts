@@ -1,17 +1,14 @@
-import * as _ from 'lodash';
+import { ConsoleReport } from './ConsoleReport';
 import { CsvFileReader } from './CsvFileReader';
-import { MatchResult } from './utils';
+import { MatchReader } from './MatchReader';
+import { Summary } from './Summary';
+import { WinsAnalysis } from './WinsAnalysis';
 
-const reader = new CsvFileReader('football.csv');
-reader.read();
-const matches = _.cloneDeep(reader.data);
-console.log(matches[0]);
-
-let manUnitedWins = 0;
-manUnitedWins = _.filter(
-    matches,
-    (match: string[]) =>
-        (match[1] === 'Man United' && match[5] === MatchResult.HomeWin) ||
-        (match[2] === 'Man United' && match[5] === MatchResult.AwayWin)
-).length;
-console.log(`ManU has won ${manUnitedWins} games`);
+const csvReader = new CsvFileReader('football.csv');
+const matchReader = new MatchReader(csvReader);
+matchReader.load();
+console.log(matchReader.matches[0]);
+const analyzer = new WinsAnalysis('Man United');
+const target = new ConsoleReport();
+const summary = new Summary(analyzer, target);
+summary.buildAndPrintReport(matchReader.matches);

@@ -1,7 +1,7 @@
 import * as fs from 'fs';
-import { dateStringToDate, MatchData, MatchResult } from './utils';
-export class CsvFileReader {
-    data: MatchData[] = [];
+import { DataReader } from './DataReader';
+export class CsvFileReader implements DataReader {
+    data: string[][] = [];
     constructor(protected fileName: string) {}
 
     read(): void {
@@ -10,17 +10,6 @@ export class CsvFileReader {
                 encoding: 'utf-8',
             })
             .split('\n')
-            .map((match: string): string[] => match.split(','))
-            .map(
-                (row: string[]): MatchData => [
-                    dateStringToDate(row[0]),
-                    row[1],
-                    row[2],
-                    parseInt(row[3]),
-                    parseInt(row[4]),
-                    row[5] as MatchResult,
-                    row[6],
-                ]
-            );
+            .map((match: string): string[] => match.split(','));
     }
 }
