@@ -14,8 +14,6 @@ const ss = new Sorter(cc);
 
 ss.sort();
 console.log(ss.collection);
-<<<<<<< HEAD
-=======
 
 const ll = new LinkedList();
 ll.add(500);
@@ -25,4 +23,3 @@ ll.add(4);
 const lls = new Sorter(ll);
 lls.sort();
 ll.print();
->>>>>>> trunk

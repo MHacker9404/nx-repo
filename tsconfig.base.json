@@ -15,6 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "typeRoots": ["@types"],
+        "types": ["node"],
         "paths": {
             "@angular/*": ["./node_modules/@angular/*"],
             "@prb-ts/header": ["./libs/header/src/index.ts"],

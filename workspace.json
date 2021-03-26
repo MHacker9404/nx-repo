@@ -1378,8 +1378,8 @@
                 "build": {
                     "executor": "@nrwl/workspace:run-commands",
                     "options": {
-                        "commands": ["rimraf dist", "tsc --project tsconfig.lib.json"],
-                        "cwd": "libs/udemy-typescript-tcdg/section-10/",
+                        "commands": ["rimraf dist", "tsc --project tsconfig.lib.json -w"],
+                        "cwd": "libs/udemy-typescript-tcdg/sec-11/",
                         "parallel": false
                     }
                 },
@@ -1392,8 +1392,11 @@
                 "serve": {
                     "executor": "@nrwl/workspace:run-commands",
                     "options": {
-                        "commands": ["rimraf dist", "node --loader ts-node/esm.mjs --experimental-top-level-await index.ts"],
-                        "cwd": "libs/udemy-typescript-tcdg/section-10"
+                        "commands": [
+                            "rimraf dist",
+                            "node --loader ts-node/esm.mjs --experimental-top-level-await src/index.ts"
+                        ],
+                        "cwd": "libs/udemy-typescript-tcdg/sec-11"
                     }
                 },
                 "test": {
