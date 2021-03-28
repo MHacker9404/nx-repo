@@ -1379,7 +1379,7 @@
                     "executor": "@nrwl/workspace:run-commands",
                     "options": {
                         "commands": ["rimraf dist", "tsc --project tsconfig.lib.json -w"],
-                        "cwd": "libs/udemy-typescript-tcdg/sec-11/",
+                        "cwd": "libs/udemy-typescript-tcdg/sec-13/",
                         "parallel": false
                     }
                 },
@@ -1396,7 +1396,7 @@
                             "rimraf dist",
                             "node --loader ts-node/esm.mjs --experimental-top-level-await src/index.ts"
                         ],
-                        "cwd": "libs/udemy-typescript-tcdg/sec-11"
+                        "cwd": "libs/udemy-typescript-tcdg/sec-13"
                     }
                 },
                 "test": {
